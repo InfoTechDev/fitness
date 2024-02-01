@@ -60,21 +60,29 @@ Where every response should contain:
 ```shell
 fitness_training_project
 ---->micro_services
-   ----> base (this have base class api, baseresponse... ) 
-   ----> fitness(core app)
-         ---->crons (In order to send notifications in a scheduled and organized manner)
-              ---->
-         ----> reposiories (this handle apis and respose for fitness app )
-              ----> event : have event apis
-                    ----> platform : this in case we will have multi platforms in future (website, dahboard, mobile...)
-                          ----> commom: this have common apis and serializers between (website, dahboard, mobile...) 
+   ----> base # (this have base class api, baseresponse... ) 
+   ----> fitness # (fitness service )
+         ---->crons #(In order to send notifications in a scheduled and organized manner)
+              ----> not_start_training_program_notification_cron # send notifications in not start program case
+              ----> finishes_training_program_notification_cron # send notifications in finished program case
+         ----> reposiories # (this handle apis and respose for fitness app )
+              ----> event #: have event apis
+                    ----> platform #: this in case we will have multi platforms in future (website, dahboard, mobile...)
+                          ----> commom #: this have common apis and serializers between (website, dahboard, mobile...) 
                           ----> mobile: ...
                           ...
                           ...
-                    ----> TDD: this folder have TestCase for events in every platforms 
+                    ----> TDD # : this folder have TestCase for events in every platforms 
                       
-              ----> event_type : have event type apis
-              ----> training_programs : have training_programs api
+              ----> event_type # : have event type apis
+                    ...
+                    ...
+              ----> training_programs # : have training_programs api
+                    ...
+                    ...
+    ----> users # (users service)
+----> settings # (configration projects (database, apps, ...) )
+----> urls #  content v1 urls
 ```
 
 
