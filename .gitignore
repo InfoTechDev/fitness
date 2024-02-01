@@ -48,15 +48,13 @@ Thumbs.db
 *.wmv
 
 .env
-db.sqlite3
 venv
 env
 
 
 fitness_training_project/micro_services/*/migrations
 fitness_training_project/micro_services/*/*/migrations
-media/
-tmp/
+
 .vscode
 
 # python manage.py collectstatic

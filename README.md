@@ -99,4 +99,4 @@ python manage.py runcrons  "fitness_training_project.micro_services.fitness.cron
 
 ```
 ##### POST MAN
-![img.png](img.png)
+![img.png](media/img.png)
