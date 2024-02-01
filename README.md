@@ -82,3 +82,11 @@ To run TDD
 ```shell
 python manage.py test fitness fitness_training_project.micro_services.fitness.repositories.event.TDD.event_mobile_tdd
 ```
+Run Crons
+```shell
+everytime you run the management command python manage.py runcrons all the crons will run if required. Depending on the application the management command can be called from the Unix crontab as often as required. Every 5 minutes usually works for most of my applications, for example:
+
+python manage.py runcrons  "fitness_training_project.micro_services.fitness.crons.finishes_training_program_notification_cron.FinishesTrainingProgramNotificationCronJob",
+python manage.py runcrons  "fitness_training_project.micro_services.fitness.crons.not_start_training_program_notification_cron.NotStartProgramNotificationCronJob",
+
+```

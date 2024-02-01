@@ -128,3 +128,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.User'
+CRON_CLASSES = [
+    "fitness_training_project.micro_services.fitness.crons.finishes_training_program_notification_cron.FinishesTrainingProgramNotificationCronJob",
+    "fitness_training_project.micro_services.fitness.crons.not_start_training_program_notification_cron.NotStartProgramNotificationCronJob",
+]
